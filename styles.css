@@ -1,0 +1,339 @@
+* 
+{
+    font-size: 20px;
+}
+
+#nav
+{
+    padding-top: 10;
+    padding-left: 10px;
+    padding-right: 17px;
+    padding-bottom: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+}
+
+#body-index #nav
+{
+    background: rgba(6, 203, 173);
+}
+
+#body-index #nav:hover, 
+#body-services #nav:hover, 
+#body-booking #nav:hover, 
+#body-contact #nav:hover
+{
+    background: black;
+}
+
+#body-services #nav
+{
+    background: rgba(134, 106, 251);
+}
+
+
+#body-booking #nav
+{
+    background: rgba(254, 70, 108);
+}
+
+
+#body-contact #nav
+{
+    background: rgba(246, 205, 1);
+}
+
+#nav:hover,
+#nav:hover #nav-links div a
+{
+    background-color: black;
+    color: white;
+}
+
+
+#nav:hover,
+#nav:hover #nav-head a
+{
+    background-color: black;
+    color: white;
+    letter-spacing: 1px;
+}
+
+#nav-head
+{
+    margin-right: auto;
+}
+
+#nav-head a 
+{
+    font-size: 28px;
+    text-decoration: none; 
+    color: black;
+}
+
+#nav-links
+{
+    display: flex;
+    flex-direction: row;
+    padding-top: 8px;
+    margin-left: auto;
+}
+
+#nav-links div
+{
+    margin-left: 20px;
+}
+
+#nav-links div a {
+    text-decoration: none;
+    color: black;
+}
+
+#nav-links div a:hover
+{
+    color: white;
+}
+
+body, html
+{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+#main-container 
+{
+    height: 100%;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    z-index: -1;
+    margin-top: 55px;
+}
+
+section 
+{
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+#section-home
+{
+    background-image: linear-gradient(rgba(221, 236, 243, .2), rgba(221, 236, 243, .2)), url('Media/logo.jpeg'); 
+    background-size: 58% 108%;
+    background-repeat: no-repeat;
+    background-position-x: 55%;
+    background-position-y: 115px;
+    background-color: rgba(221, 236, 243, 1)
+    
+}
+
+#section-about
+{
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+#section-about-about-box
+{
+    width: 500px;
+    margin-top: 3%;
+}
+
+#about-box-title
+{
+    font-size: 45px;
+    margin-bottom: 25px;
+    color: rgba(6,203,173,255);
+}
+
+@keyframes intoView-about-box 
+{
+    from {
+        transform: translateX(1000px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+#about-box
+{
+    margin-bottom: 15px;
+    animation-name: intoView-about-box;
+    animation-duration: 5s;
+    font-size: 22px;
+}
+
+@keyframes intoView-about-box-catchtitle
+{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#about-box-catchtitle
+{
+    margin-top: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: cursive;
+    color: rgba(6,203,173,255);
+    opacity: 0;
+    animation-name: intoView-about-box-catchtitle;
+    animation-duration: 3s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+
+}
+
+#control-to-services
+{
+    margin-top: 55px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgba(6,203,173,255);
+    color: white;
+    width: 200px;
+    padding: 4px;
+    transition: background-color .7s ease;
+}
+
+#control-to-services:hover
+{
+    background-color: black;
+    color: white;
+}
+
+#home-head 
+{
+    text-align: center;
+}
+
+#title-head 
+{
+    font-size: 90px;
+}
+
+#title-tagline
+{
+    font-size: 28px;
+}
+
+#section-about
+{
+   
+}
+
+#section-testimonials
+{
+    background-color: lightgray
+}
+
+::-webkit-scrollbar
+{
+    width: 7px; 
+}
+  
+::-webkit-scrollbar-thumb 
+{
+    background-color: rgba(0, 0, 0, 0.3); 
+    border-radius: 5px; 
+}
+  
+::-webkit-scrollbar-thumb:hover 
+{
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+  
+::-webkit-scrollbar-track 
+{
+    background-color: transparent;
+}
+
+#footer
+{
+    position: fixed;
+    left: 0;
+    bottom: -110px;
+    width: 100%;
+    height: 105px;
+    background: rgba(169, 169, 169, .7);
+    transition: bottom .3s;
+    padding: 4px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#footer-main
+{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+#footer-to-socials
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#footer div
+{
+   margin-top: 4px;
+}
+
+@keyframes rotateIcons 
+{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#footer-to-contact 
+{
+    font-size: 18px;
+}
+
+#footer-to-socials
+{
+    margin-left: 50px;
+}
+
+#footer-to-socials div
+{
+    margin-right: 20px;  
+}
+
+#footer-to-socials div:hover 
+{
+    cursor: pointer;
+    animation-name: rotateIcons;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+#footer-attribute 
+{
+    font-size: 14px;
+}
