@@ -201,7 +201,7 @@ section
 
 }
 
-#control-to-services
+.control-to
 {
     margin-top: 55px;
     border-radius: 15px;
@@ -213,7 +213,7 @@ section
     transition: background-color .7s ease;
 }
 
-#control-to-services:hover
+.control-to:hover
 {
     background-color: black;
     color: white;
@@ -234,14 +234,40 @@ section
     font-size: 28px;
 }
 
-#section-about
+#section-features
 {
-   
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(221, 236, 243, 1)
 }
 
-#section-testimonials
+#section-features-container
 {
-    background-color: lightgray
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#section-features div
+{
+    margin-top: 5%;
+    text-align: center;
+    width: 100%;
+    color: darkslategray;
+    font-weight: bold;
+}
+
+#section-features .features-each img:hover
+{
+    animation-name: rotateIcons; /* the keyframes are defined later */
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.features-each-text
+{
+    font-size: 24px;
 }
 
 ::-webkit-scrollbar
