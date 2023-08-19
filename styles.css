@@ -196,7 +196,7 @@ section
     opacity: 0;
     animation-name: intoView-about-box-catchtitle;
     animation-duration: 3s;
-    animation-delay: 5s;
+    animation-delay: 8s;
     animation-fill-mode: forwards;
 
 }
@@ -239,7 +239,8 @@ section
     background-color: lightgray;
     display: flex;
     flex-direction: column;
-    background-color: rgba(221, 236, 243, 1)
+    background-color: rgba(221, 236, 243, 1);
+    overflow: hidden;
 }
 
 #section-features-container
@@ -265,9 +266,50 @@ section
     animation-iteration-count: 1;
 }
 
+@keyframes intoView-features-each-ac
+{
+    from {
+        transform: translateY(1000px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes intoView-features-each-bd
+{
+    from {
+        transform: translateY(-1000px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+#features-a,
+#features-c
+{
+    animation-name: intoView-features-each-ac;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+#features-b,
+#features-d
+{
+    animation-name: intoView-features-each-bd;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
 .features-each-text
 {
     font-size: 24px;
+}
+
+#control-to-book
+{
+    margin-top: 33px;
 }
 
 ::-webkit-scrollbar
