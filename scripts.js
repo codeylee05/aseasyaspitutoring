@@ -19,28 +19,22 @@ window.addEventListener("mousemove", (e) => {
 
 });
 
-/*in-section-view animation*/
-// Get all feature elements
-const featureElements = document.querySelectorAll('.feature');
+/*view animations in section view*/
+const observer = new IntersectionObserver((entries) => {
 
-// Define the Intersection Observer callback function
-const observerCallback = (entries, observer) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
+
+        console.log(entry);
         if (entry.isIntersecting) {
-            // Add animation class to the element in view
-            entry.target.classList.add('animate');
-            // Unobserve the element to avoid redundant callbacks
-            observer.unobserve(entry.target);
-        }
+
+            entry.target.classList.add("animate");
+
+        };
+
     });
-};
 
-// Create an Intersection Observer
-const observer = new IntersectionObserver(observerCallback, {
-    threshold: 0.3 // Adjust this threshold as needed
-});
+})
 
-// Observe each feature element
-featureElements.forEach(feature => {
-    observer.observe(feature);
-});
+const inanimateElements = document.querySelectorAll(".inanimate");
+
+inanimateElements.forEach((element) => observer.observe(element));
