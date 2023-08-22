@@ -15,7 +15,7 @@ window.addEventListener("mousemove", (e) => {
 
     } else { 
         
-        if (viewPortWidth <= 320) {
+        if (viewPortWidth <= 375) {
 
             footerElement.style.bottom = '-355px';
 
