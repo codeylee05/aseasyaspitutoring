@@ -5,6 +5,7 @@ window.addEventListener("mousemove", (e) => {
 
     const mouseYPosition = e.clientY;
     const viewPortHeight = window.innerHeight;
+    const viewPortWidth = window.innerWidth;
     const thresholdHeight = 93;
     const distanceFromBottom = viewPortHeight - mouseYPosition
 
@@ -12,9 +13,17 @@ window.addEventListener("mousemove", (e) => {
 
         footerElement.style.bottom = '0';
 
-    } else {
+    } else { 
+        
+        if (viewPortWidth <= 320) {
 
-        footerElement.style.bottom = '-100px';
+            footerElement.style.bottom = '-355px';
+
+        } else {
+
+            footerElement.style.bottom = '-100px';
+        }
+
     }
 
 });
@@ -36,5 +45,4 @@ const observer = new IntersectionObserver((entries) => {
 })
 
 const inanimateElements = document.querySelectorAll(".inanimate");
-
 inanimateElements.forEach((element) => observer.observe(element));
