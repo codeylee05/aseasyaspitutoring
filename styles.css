@@ -20,7 +20,7 @@
     align-items: center;
     height: 55px;
 }
-@media (max-width: 320px)
+@media (max-width: 375px)
 {
     #nav
     {
@@ -99,7 +99,7 @@
     color: black;
 }
 
-@media (max-width: 320px)
+@media (max-width: 375px)
 {
     #nav-head
     {
@@ -130,7 +130,7 @@
     color: white;
 }
 
-@media (max-width: 320px)
+@media (max-width: 375px)
 {
     #nav-links
     {
@@ -140,9 +140,6 @@
         margin-right: 20px;
     }
 
-    #nav-links div
-    {
-    }
 }
 
 body, html
@@ -168,7 +165,7 @@ section
     scroll-snap-align: start;
 }
 
-@media (max-width: 320px)
+@media (max-width: 375px)
 {
     #main-container
     {
@@ -187,7 +184,7 @@ section
     
 }
 
-@media (max-width: 320px)
+@media (max-width: 375px)
 {
     #section-home
     {
@@ -215,7 +212,7 @@ section
     font-size: 28px;
 }
 
-@media (max-width: 320px)
+@media (max-width: 375px)
 {
     #title-head
     {
@@ -316,7 +313,7 @@ section
     color: white;
 }
 
-@media (max-width: 320px)
+@media (max-width: 375px)
 {
     #about-box-title
     {
@@ -426,7 +423,7 @@ section
     margin-top: 33px;
 }
 
-@media (max-width: 320px)
+@media (max-width: 375px)
 {
     .features-each-text
     {
@@ -561,7 +558,7 @@ section
     font-size: 14px;
 }
 
-@media (max-width: 320px)
+@media (max-width: 375px)
 {
     #footer
     {
