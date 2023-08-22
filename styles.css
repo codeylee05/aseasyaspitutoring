@@ -20,6 +20,26 @@
     align-items: center;
     height: 55px;
 }
+@media (max-width: 320px)
+{
+    #nav
+    {
+        padding-top: 0;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 18%; 
+    }
+}
 
 #body-index #nav
 {
@@ -79,6 +99,14 @@
     color: black;
 }
 
+@media (max-width: 320px)
+{
+    #nav-head
+    {
+        transform: translateX(75%);
+    }
+}
+
 #nav-links
 {
     display: flex;
@@ -100,6 +128,21 @@
 #nav-links div a:hover
 {
     color: white;
+}
+
+@media (max-width: 320px)
+{
+    #nav-links
+    {
+        margin-left: 0;
+        display: flex;
+        flex-direction: row;
+        margin-right: 20px;
+    }
+
+    #nav-links div
+    {
+    }
 }
 
 body, html
@@ -125,6 +168,14 @@ section
     scroll-snap-align: start;
 }
 
+@media (max-width: 320px)
+{
+    #main-container
+    {
+        margin-top: 90px;
+    }
+}
+
 #section-home
 {
     background-image: linear-gradient(rgba(221, 236, 243, .2), rgba(221, 236, 243, .2)), url('Media/logo.jpeg'); 
@@ -134,6 +185,47 @@ section
     background-position-y: 115px;
     background-color: rgba(221, 236, 243, 1)
     
+}
+
+@media (max-width: 320px)
+{
+    #section-home
+    {
+        background-image: linear-gradient(rgba(221, 236, 243, .2), rgba(221, 236, 243, .2)), url('Media/logo-blank.jpeg');
+        background-size: 110% 55%;
+        background-repeat: no-repeat;
+        background-position-x: 5%;
+        background-position-y: 148px;
+        background-color: rgba(221, 236, 243, 1)
+    }
+}
+
+#home-head 
+{
+    text-align: center;
+}
+
+#title-head 
+{
+    font-size: 90px;
+}
+
+#title-tagline
+{
+    font-size: 28px;
+}
+
+@media (max-width: 320px)
+{
+    #title-head
+    {
+        font-size: 60px;
+    }
+
+    #title-tagline
+    {
+        font-size: 23px;
+    }
 }
 
 #section-about
@@ -161,7 +253,7 @@ section
 @keyframes intoView-about-box 
 {
     from {
-        transform: translateX(1000px);
+        transform: translateX(300px);
     }
     to {
         transform: translateX(0px);
@@ -224,19 +316,36 @@ section
     color: white;
 }
 
-#home-head 
+@media (max-width: 320px)
 {
-    text-align: center;
-}
+    #about-box-title
+    {
+        font-size: 35px;
+        margin-bottom: 19px;
+        color: rgba(6,203,173,255);
+    }
 
-#title-head 
-{
-    font-size: 90px;
-}
+    #about-box
+    {
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
 
-#title-tagline
-{
-    font-size: 28px;
+    #section-about-about-box
+    {
+        width: 250px;
+        margin-top: 3%;
+    }
+
+    #about-box-catchtitle
+    {
+        margin-top: 27px;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: cursive;
+        color: rgba(6,203,173,255);
+        opacity: 0;
+    }
 }
 
 #section-features
@@ -317,6 +426,47 @@ section
     margin-top: 33px;
 }
 
+@media (max-width: 320px)
+{
+    .features-each-text
+    {
+        font-size: 21px;
+    }
+
+    .features-each img
+    {
+        height: 70px;
+        width: 70px
+    }
+
+    #section-features-container
+    {
+        display: flex;
+        flex-direction: column;
+    
+    }
+        
+    @keyframes intoView-features-each-ac
+    {
+        from {
+            transform: translateX(550px);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes intoView-features-each-bd
+    {
+        from {
+            transform: translateX(-550px);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
 ::-webkit-scrollbar
 {
     width: 7px; 
@@ -370,7 +520,7 @@ section
 
 #footer div
 {
-   margin-top: 4px;
+   margin-top: 6px;
 }
 
 @keyframes rotateIcons 
@@ -390,7 +540,7 @@ section
 
 #footer-to-socials
 {
-    margin-left: 50px;
+    margin-left: 26px;
 }
 
 #footer-to-socials div
@@ -409,4 +559,36 @@ section
 #footer-attribute 
 {
     font-size: 14px;
+}
+
+@media (max-width: 320px)
+{
+    #footer
+    {
+        bottom: -355px;
+        width: 100%;
+        height: 350px;
+        transition: bottom .5s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #footer-to-contact 
+    {
+        text-align: center;
+        font-size: 17px;
+    }
+
+    #footer-attribute 
+    {
+        text-align: center;
+        font-size: 12px;
+    }
+
+    #footer div
+    {
+        margin-top: 10px;
+    }
 }
